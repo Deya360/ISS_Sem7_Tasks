@@ -1,0 +1,13 @@
+#lang racket
+(println "Calculating the purchase price: ")
+(println "Enter the input data:")
+(print "Enter the price of a notebook (RUB.): ")
+(define nb_price (read))
+(print "Enter the amount of notebooks: ")
+(define nb_count (read))
+(print "Enter the price of a pencil (RUB.): ")
+(define p_price (read))
+(print "Enter the amount of pencils: ")
+(define p_count (read))
+(print "Purchase total: " )
+(printf "~s RUB." (+ (* nb_price nb_count) (* p_price p_count)))
