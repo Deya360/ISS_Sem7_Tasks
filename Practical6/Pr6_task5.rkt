@@ -1,18 +1,22 @@
 #lang scheme
 
-(define (solve-quadratic-equation a b c)
-  (displayln "Equation roots: ")
-  (let ((dc (sqrt (- (* b b) (* 4.0 a c)))))
-    (begin (display "x1 = ")
-           (displayln (/ (+ (- b) dc) (* 2.0 a)))
-           (display "x2 = ")
-           (displayln (/ (- (- b) dc) (* 2.0 a))))
-    )
-  )
-
 (displayln "Solving of a quadratic equation: ")
 (displayln "Enter on a single line the values of the coefficients: ")
-(solve-quadratic-equation (read) (read) (read))
+
+(let ((a (read)))
+  (let ((b (read)))
+    (let ((c (read)))
+      (displayln "Equation roots: ")
+      (let ((dc (sqrt (- (* b b) (* 4.0 a c)))))
+        (begin (display "x1 = ")
+               (displayln (/ (+ (- b) dc) (* 2.0 a)))
+               (display "x2 = ")
+               (displayln (/ (- (- b) dc) (* 2.0 a))))
+        )
+
+      )
+    )
+  )
 
 
 
