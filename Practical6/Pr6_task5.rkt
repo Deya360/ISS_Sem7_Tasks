@@ -2,11 +2,12 @@
 
 (define (solve-quadratic-equation a b c)
   (displayln "Equation roots: ")
-  (define dc (sqrt (- (* b b) (* 4.0 a c))))
-  (begin (display "x1 = ")
-         (displayln (/ (+ (- b) dc) (* 2.0 a)))
-         (display "x2 = ")
-         (displayln (/ (- (- b) dc) (* 2.0 a))))
+  (let ((dc (sqrt (- (* b b) (* 4.0 a c)))))
+    (begin (display "x1 = ")
+           (displayln (/ (+ (- b) dc) (* 2.0 a)))
+           (display "x2 = ")
+           (displayln (/ (- (- b) dc) (* 2.0 a))))
+    )
   )
 
 (displayln "Solving of a quadratic equation: ")
